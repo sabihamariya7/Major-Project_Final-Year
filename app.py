@@ -26,7 +26,7 @@ Below is our Questions Similarity Predictor for Quora
 q1 = st.text_input('Enter Question 1...')
 q2 = st.text_input('Enter Question 2...')
 
-pkl_filename = "model/quora_similarity.pkl"
+pkl_filename = "quora_similarity.pkl"
 with open(pkl_filename, 'rb') as file:
     pickle_model = pickle.load(file)
 	

@@ -17,8 +17,8 @@ import spacy
 from tqdm import tqdm
 import streamlit as st
 
-st.set_page_config(page_title='Quora Similarity Predictor')
-st.title('Quora Similarity Predictor')
+st.set_page_config(page_title='Quora Predictor')
+st.title('Quora Questions Similarity Predictor')
 st.write("""
 Below is our Questions Similarity Predictor for Quora
 """)
@@ -220,7 +220,7 @@ if status:
     result=pickle_model.predict(X)[0]
     probability=np.max(pickle_model.predict_proba(X))
     if(result==0):
-        st.subheader(f"Both the questions are different with the probability of {probability*100:.2f}%.")
+        st.subheader(f"Both the questions are DIFFERENT with the Probability of {probability*100:.2f}%.")
     else:
-        st.subheader(f"Both the questions are similar with the probability of {probability*100:.2f}%.")
+        st.subheader(f"Both the questions are SIMILAR with the Probability of {probability*100:.2f}%.")
 
